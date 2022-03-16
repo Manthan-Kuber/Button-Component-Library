@@ -1,11 +1,17 @@
 import styled from "styled-components";
+import hexToRgba from "hex-to-rgba";
 
 export const ButtonLabel = styled.p`
   font: 400 1.2rem "Ubuntu Mono";
   color: #333;
+  margin-bottom: 1.2rem;
 `;
 
-export const StyledButton = styled.button`
+export const ButtonContainer = styled.div`
+  margin-block: 2.8rem;
+`;
+
+export const DefaultButton = styled.button`
   padding: ${(props) => {
     switch (props.size) {
       case "sm":
@@ -18,40 +24,97 @@ export const StyledButton = styled.button`
         return "0.8em 2em";
     }
   }};
-  background: ${(props) =>
-    props.variant === "outline" || props.variant === "text"
-      ? "#FFF"
-      : "revert"};
   font: 500 1.4rem "Noto Sans JP", sans-serif;
-  color: ${(props) =>
-    props.variant === "outline" || props.variant === "text"
-      ? "#3D5AFE"
-      : "#3F3F3F"};
+  color: ${(props) => (props.color ? "#FFF" : "#3f3f3f")};
   border-radius: 6px;
-  margin-top: 1.2rem;
-  border: ${(props) =>
-    props.variant === "outline" ? "1px solid #3D5AFE" : "none"};
+  border: none;
   cursor: pointer;
+  background-color: ${(props) => {
+    switch (props.color) {
+      case "primary":
+        return "#2962FF";
+      case "secondary":
+        return "#455A64";
+      case "danger":
+        return "#D32F2F";
+      default:
+        return "#E0E0E0";
+    }
+  }};
+  box-shadow: ${(props) =>
+    props.disabledShadow
+      ? "none"
+      : props.color === "primary"
+      ? hexToRgba("#0039CB", 0.2)
+      : props.color === "secondary"
+      ? hexToRgba("#1C313A", 0.2)
+      : props.color === "danger"
+      ? hexToRgba("#9A0007", 0.2)
+      : hexToRgba("#AEAEAE", 0.2)};
+
+  pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
 
   &:hover,
   &:focus {
-    background-color: ${(props) =>
-      props.variant === "outline" || props.variant === "text"
-        ? "rgba(41, 98, 255, 0.1)"
-        : "#aeaeae"};
+    background-color: ${(props) => {
+      switch (props.color) {
+        case "primary":
+          return "#0039CB";
+        case "secondary":
+          return "#1C313A";
+        case "danger":
+          return "#9A0007";
+        default:
+          return "#AEAEAE";
+      }
+    }};
   }
 `;
 
-export const DisabledButton = styled(StyledButton)`
-  cursor: auto;
-  pointer-events: none;
+export const OutlinedButton = styled(DefaultButton)`
+  background-color: #fff;
+  color: ${(props) => {
+    switch (props.color) {
+      case "primary":
+        return "#0039CB";
+      case "secondary":
+        return "#455a64";
+      case "danger":
+        return "#9A0007";
+      default:
+        return "#3f3f3f";
+    }
+  }};
+  border: 1px solid;
+  border-color: ${(props) => {
+    switch (props.color) {
+      case "primary":
+        return "#0039CB";
+      case "secondary":
+        return "#455a64";
+      case "danger":
+        return "#9A0007";
+      default:
+        return "#3f3f3f";
+    }
+  }};
+  &:hover,
+  &:focus {
+    background-color: ${(props) => {
+      switch (props.color) {
+        case "primary":
+          return hexToRgba("#0039CB", 0.1);
+        case "secondary":
+          return hexToRgba("#1C313A", 0.1);
+        case "danger":
+          return hexToRgba("#9A0007", 0.1);
+        default:
+          return hexToRgba("#AEAEAE", 0.1);
+      }
+    }};
+  }
 `;
 
-export const ShadowDisabledButton = styled(DisabledButton)`
-  color: white;
-  background-color: #3d5afe;
-`;
-
-export const ButtonContainer = styled.div`
-  margin-block: 2.8rem;
+export const TextButton = styled(OutlinedButton)`
+  border: none;
 `;

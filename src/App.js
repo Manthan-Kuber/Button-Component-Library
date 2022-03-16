@@ -7,18 +7,18 @@ function App() {
       <main>
         <Container>
           <Title>Buttons</Title>
-          <Button buttonLabel="<Button />" />
+          <Button buttonLabel="<Button color='default' />" />
           <Button
-            buttonLabel="<Button variant = 'outline' />"
-            variant="outline"
+            disabled
+            variant="text"
+            color="primary"
+            buttonLabel="<Button color='default' />"
           />
-          <Button buttonLabel="<Button variant = 'text' />" variant="text" />
-          <Button disabled buttonLabel="<Button disabled />" />
-          <Button disableShadow  buttonLabel="<Button disableShadow />" />
-          <Button size="sm" buttonLabel="<Button size='sm />" />
-          <Button size="md" buttonLabel="<Button size='md />" />
-          <Button size="lg" buttonLabel="<Button size='lg />" />
-          <Button variant='text' disabled buttonLabel=" <Button variant='text' disabled />" />
+          <Button
+            color="danger"
+            variant="outline"
+            buttonLabel=" <Button color='danger' variant='outline'/>"
+          />
         </Container>
       </main>
     </>

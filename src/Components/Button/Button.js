@@ -2,9 +2,9 @@ import React from "react";
 import {
   ButtonContainer,
   ButtonLabel,
-  DisabledButton,
-  ShadowDisabledButton,
-  StyledButton,
+  DefaultButton,
+  OutlinedButton,
+  TextButton,
 } from "./Button.styles";
 
 const Button = (props) => {
@@ -12,18 +12,18 @@ const Button = (props) => {
     <>
       <ButtonContainer>
         <ButtonLabel>{props.buttonLabel}</ButtonLabel>
-        {props.disableShadow || props.size ? (
-          <ShadowDisabledButton variant={props.variant} size={props.size}>
+        {props.variant === "outline" ? (
+          <OutlinedButton color={props.color} size={props.size}>
             {props.buttonText ? props.buttonText : "Default"}
-          </ShadowDisabledButton>
-        ) : props.disabled ? (
-          <DisabledButton variant={props.variant} size={props.size}>
+          </OutlinedButton>
+        ) : props.variant === "text" ? (
+          <TextButton color={props.color} size={props.size}>
             {props.buttonText ? props.buttonText : "Default"}
-          </DisabledButton>
+          </TextButton>
         ) : (
-          <StyledButton variant={props.variant} size={props.size}>
+          <DefaultButton color={props.color} size={props.size}>
             {props.buttonText ? props.buttonText : "Default"}
-          </StyledButton>
+          </DefaultButton>
         )}
       </ButtonContainer>
     </>
