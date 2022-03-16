@@ -8,15 +8,11 @@ function App() {
         <Container>
           <Title>Buttons</Title>
           <Button buttonLabel="<Button color='default' />" />
+          <Button disabled buttonLabel="<Button color='default' />" />
           <Button
             disabled
-            variant="text"
-            color="primary"
-            buttonLabel="<Button color='default' />"
-          />
-          <Button
             color="danger"
-            variant="outline"
+            variant='text'
             buttonLabel=" <Button color='danger' variant='outline'/>"
           />
         </Container>

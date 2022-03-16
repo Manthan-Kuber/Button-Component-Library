@@ -25,22 +25,21 @@ export const DefaultButton = styled.button`
     }
   }};
   font: 500 1.4rem "Noto Sans JP", sans-serif;
-  color: ${(props) => (props.color ? "#FFF" : "#3f3f3f")};
+  color: ${(props) =>
+    props.disabled ? "#9E9E9E" : props.color ? "#FFF" : "#3f3f3f"};
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  background-color: ${(props) => {
-    switch (props.color) {
-      case "primary":
-        return "#2962FF";
-      case "secondary":
-        return "#455A64";
-      case "danger":
-        return "#D32F2F";
-      default:
-        return "#E0E0E0";
-    }
-  }};
+  background-color: ${(props) =>
+    props.disabled
+      ? "#E0E0E0"
+      : props.color === "primary"
+      ? "#2962FF"
+      : props.color === "secondary"
+      ? "#455A64"
+      : props.color === "danger"
+      ? "#D32F2F"
+      : "#E0E0E0"};
   box-shadow: ${(props) =>
     props.disabledShadow
       ? "none"
@@ -72,20 +71,18 @@ export const DefaultButton = styled.button`
 `;
 
 export const OutlinedButton = styled(DefaultButton)`
-  background-color: #fff;
-  color: ${(props) => {
-    switch (props.color) {
-      case "primary":
-        return "#0039CB";
-      case "secondary":
-        return "#455a64";
-      case "danger":
-        return "#9A0007";
-      default:
-        return "#3f3f3f";
-    }
-  }};
-  border: 1px solid;
+  background-color: ${(props) => props.disabled ? "#E0E0E0" : "#FFF" };
+  color: ${(props) =>
+    props.disabled
+      ? "#9E9E9E"
+      : props.color === "primary"
+      ? "#2962FF"
+      : props.color === "secondary"
+      ? "#455A64"
+      : props.color === "danger"
+      ? "#D32F2F"
+      : "#E0E0E0"};
+  border: ${(props) => props.disabled ? "none" : "1px solid" };
   border-color: ${(props) => {
     switch (props.color) {
       case "primary":
@@ -117,4 +114,5 @@ export const OutlinedButton = styled(DefaultButton)`
 
 export const TextButton = styled(OutlinedButton)`
   border: none;
+  background-color: ${(props) => props.disabled ? "#FFF" : null };
 `;

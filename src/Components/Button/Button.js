@@ -13,15 +13,27 @@ const Button = (props) => {
       <ButtonContainer>
         <ButtonLabel>{props.buttonLabel}</ButtonLabel>
         {props.variant === "outline" ? (
-          <OutlinedButton color={props.color} size={props.size}>
+          <OutlinedButton
+            color={props.color}
+            disabled={props.disabled}
+            disableShadow={props.disableShadow}
+          >
             {props.buttonText ? props.buttonText : "Default"}
           </OutlinedButton>
         ) : props.variant === "text" ? (
-          <TextButton color={props.color} size={props.size}>
+          <TextButton
+            color={props.color}
+            disabled={props.disabled}
+            disableShadow={props.disableShadow}
+          >
             {props.buttonText ? props.buttonText : "Default"}
           </TextButton>
         ) : (
-          <DefaultButton color={props.color} size={props.size}>
+          <DefaultButton
+            color={props.color}
+            disabled={props.disabled}
+            disableShadow={props.disableShadow}
+          >
             {props.buttonText ? props.buttonText : "Default"}
           </DefaultButton>
         )}
