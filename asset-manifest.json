@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Button-Component-Library/static/css/main.fdbe6ba2.css",
+    "main.js": "/Button-Component-Library/static/js/main.5ed01851.js",
+    "static/js/787.e7c1ab50.chunk.js": "/Button-Component-Library/static/js/787.e7c1ab50.chunk.js",
+    "index.html": "/Button-Component-Library/index.html",
+    "main.fdbe6ba2.css.map": "/Button-Component-Library/static/css/main.fdbe6ba2.css.map",
+    "main.5ed01851.js.map": "/Button-Component-Library/static/js/main.5ed01851.js.map",
+    "787.e7c1ab50.chunk.js.map": "/Button-Component-Library/static/js/787.e7c1ab50.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fdbe6ba2.css",
+    "static/js/main.5ed01851.js"
+  ]
+}
