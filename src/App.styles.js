@@ -28,5 +28,5 @@ export const FooterText = styled.p`
   font: 1.4rem 'Montserrat',sans-serif;
   color: #bdbdbd;
   text-align: center;
-  margin-block: 2.4rem;
+  
 `;

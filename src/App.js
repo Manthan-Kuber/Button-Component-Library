@@ -1,4 +1,10 @@
-import { Container, GridWrapper, SubTitle, Title, FooterText } from "./App.styles";
+import {
+  Container,
+  GridWrapper,
+  SubTitle,
+  Title,
+  FooterText,
+} from "./App.styles";
 import Button from "./Components/Button/Button";
 
 function App() {
@@ -149,7 +155,12 @@ function App() {
         </Container>
       </main>
       <footer>
-      <FooterText>Created by <b><u>Manthan Kuber</u></b></FooterText>
+        <FooterText>
+          Created by{" "}
+          <b>
+            <u>Manthan Kuber</u>
+          </b>
+        </FooterText>
       </footer>
     </>
   );
