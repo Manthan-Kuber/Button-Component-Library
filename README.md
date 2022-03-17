@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="#">
+    <a href="https://manthan-kuber.github.io/Button-Component-Library/">
       Live Demo
     </a>
     <span> | </span>
@@ -48,9 +48,9 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 ## Learnings
 
-- Learned about Styled Components
+- Learnt Styled Components from Scratch
 - Improved React Logic
-- Improved 
+- Improved Overall understanding of Clean and Maintainable styling of a react app using styled components
 
 ## Contact
 
