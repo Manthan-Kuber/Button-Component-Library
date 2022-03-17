@@ -11,6 +11,12 @@ export const ButtonContainer = styled.div`
   margin-block: 2.8rem;
 `;
 
+export const IconWrapper = styled.span`
+  vertical-align: text-top;
+  padding-inline:0.3rem;
+`;
+
+
 export const DefaultButton = styled.button`
   padding: ${(props) => {
     switch (props.size) {
@@ -71,7 +77,7 @@ export const DefaultButton = styled.button`
 `;
 
 export const OutlinedButton = styled(DefaultButton)`
-  background-color: ${(props) => props.disabled ? "#E0E0E0" : "#FFF" };
+  background-color: ${(props) => (props.disabled ? "#E0E0E0" : "#FFF")};
   color: ${(props) =>
     props.disabled
       ? "#9E9E9E"
@@ -81,8 +87,8 @@ export const OutlinedButton = styled(DefaultButton)`
       ? "#455A64"
       : props.color === "danger"
       ? "#D32F2F"
-      : "#E0E0E0"};
-  border: ${(props) => props.disabled ? "none" : "1px solid" };
+      : "#3f3f3f"};
+  border: ${(props) => (props.disabled ? "none" : "1px solid")};
   border-color: ${(props) => {
     switch (props.color) {
       case "primary":
@@ -114,5 +120,5 @@ export const OutlinedButton = styled(DefaultButton)`
 
 export const TextButton = styled(OutlinedButton)`
   border: none;
-  background-color: ${(props) => props.disabled ? "#FFF" : null };
+  background-color: ${(props) => (props.disabled ? "#FFF" : null)};
 `;

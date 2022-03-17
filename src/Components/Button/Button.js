@@ -3,6 +3,7 @@ import {
   ButtonContainer,
   ButtonLabel,
   DefaultButton,
+  IconWrapper,
   OutlinedButton,
   TextButton,
 } from "./Button.styles";
@@ -17,6 +18,7 @@ const Button = (props) => {
             color={props.color}
             disabled={props.disabled}
             disableShadow={props.disableShadow}
+            size={props.size}
           >
             {props.buttonText ? props.buttonText : "Default"}
           </OutlinedButton>
@@ -25,17 +27,23 @@ const Button = (props) => {
             color={props.color}
             disabled={props.disabled}
             disableShadow={props.disableShadow}
+            size={props.size}
           >
             {props.buttonText ? props.buttonText : "Default"}
           </TextButton>
         ) : (
-          <DefaultButton
-            color={props.color}
-            disabled={props.disabled}
-            disableShadow={props.disableShadow}
-          >
-            {props.buttonText ? props.buttonText : "Default"}
-          </DefaultButton>
+          <>
+            <DefaultButton
+              color={props.color}
+              disabled={props.disabled}
+              disableShadow={props.disableShadow}
+              size={props.size}
+            >
+              <IconWrapper className="material-icons">{props.startIcon}</IconWrapper>
+              {props.buttonText ? props.buttonText : "Default"}
+              <IconWrapper className="material-icons">{props.endIcon}</IconWrapper>
+            </DefaultButton>
+          </>
         )}
       </ButtonContainer>
     </>
