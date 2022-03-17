@@ -34,7 +34,7 @@ Desktop Screenshot
 ![screenshot](deskSS.png)
 
 Mobile Screenshot
-![screenshot](mobSS.png)
+![screenshot](mobSS.jpg)
 
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht) was to build an application to complete the given user stories.
