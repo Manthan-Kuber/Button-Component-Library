@@ -1,18 +1,18 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Checkout Page</h1>
+<h1 align="center">Button Component Library</h1>
 
 <div align="center">
-   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
+   A React Button Component Library.Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
 </div>
 
 <div align="center">
   <h3>
-    <a href="https://manthan-kuber.github.io/Checkout-page/">
+    <a href="#">
       Live Demo
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO">
+    <a href="https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY">
       Challenge
     </a>
   </h3>
@@ -48,9 +48,9 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 ## Learnings
 
-- Learnt some new DOM travsersal and Manipulation techniques
-- Improved styling inputs
-- Improved understanding of form and input elements
+- Learned about Styled Components
+- Improved React Logic
+- Improved 
 
 ## Contact
 
